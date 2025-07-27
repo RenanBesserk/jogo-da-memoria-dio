@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #fc1e8a;
+    background: #0b5796;
     user-select: none;
 }
 
@@ -17,8 +17,8 @@ body {
     background: linear-gradient(
         325deg,
         #03001e 0%,
-        #7303c0 30%,
-        #ec38bc 70%,
+        #06366d 30%,
+        #1d99ec 70%,
         #fdeff9 100%
     );
     padding: 40px 60px;
@@ -33,10 +33,11 @@ h2 {
 
 .reset {
     padding: 15px 20px;
-    width: 100%;
+    width: 50%;
     color: #000;
     background-color: #fff;
     border: none;
+    border-radius: 30px;
     font-size: 1.5em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -45,7 +46,7 @@ h2 {
 }
 
 .reset:focus {
-    color: #ec38bc;
+    color: #0b5796;
     background-color: #262809;
 }
 
