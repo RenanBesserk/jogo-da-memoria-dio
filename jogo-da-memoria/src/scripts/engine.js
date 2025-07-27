@@ -1,30 +1,30 @@
-const emojis = [
-    "💩",
-    "💩",
-    "🌚",
-    "🌚",
-    "😎",
-    "😎",
-    "🫡",
-    "🫡",
-    "😱",
-    "😱",
-    "🤢",
-    "🤢",
-    "😼",
-    "😼",
-    "💻",
-    "💻"
+const chars = [
+    "./src/images/gaara.jpg",
+    "./src/images/gaara.jpg",
+    "./src/images/hinata.jpg",
+    "./src/images/hinata.jpg",
+    "./src/images/kakashi.jpg",
+    "./src/images/kakashi.jpg",
+    "./src/images/kiba.jpg",
+    "./src/images/kiba.jpg",
+    "./src/images/lee.jpg",
+    "./src/images/lee.jpg",
+    "./src/images/naruto.jpg",
+    "./src/images/naruto.jpg",
+    "./src/images/sakura.jpg",
+    "./src/images/sakura.jpg",
+    "./src/images/sasuke.jpg",
+    "./src/images/sasuke.jpg"
 ];
 
 let openCards = []; // cartas viradas
 
-let shuffleEmojis = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
+let shuffleChars = chars.sort(() => (Math.random() > 0.5 ? 2 : -1));
 
-for (let i=0; i < emojis.length; i++) {
+for (let i=0; i < chars.length; i++) {
     let box = document.createElement ("div");
     box.className = "item";
-    box.innerHTML = shuffleEmojis[i];
+    box.innerHTML = `<img src="${shuffleChars[i]}" class="carta-img" />`;
     box.onclick = handleClick;
     document.querySelector(".game").appendChild(box);
 }
@@ -53,7 +53,7 @@ function checkMatch () {
 
     openCards = [];
 
-    if(document.querySelectorAll (".boxMatch").length === emojis.length) {
+    if(document.querySelectorAll (".boxMatch").length === chars.length) {
         {alert("Você venceu!")}
     }
 }
